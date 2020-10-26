@@ -1,10 +1,12 @@
+const config = require("./.contentful.json");
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'main',
+    title: 'NuxtProject',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,10 +16,24 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    { src: "~/node_modules/highlight.js/styles/hopscotch.css", lang: "css" },
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [
+    { src: "~/plugins/window" },
+    { src: "~/plugins/aos", ssr: false },
+    { src: "~/plugins/validate" },
+    { src: "~/plugins/contentful.js" },
+  ],
+
+  // Markdown parser done right (https://github.com/markdown-it/markdown-it)
+  markdownit: {
+    html: true,
+    injected: true,
+    use: ["markdown-it-highlightjs"],
+  },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -34,11 +50,24 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://github.com/markdown-it/markdown-it
+    "@nuxtjs/markdownit",
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extractCSS: true,
+    transpile: ["vee-validate/dist/rules"],
+    extend(config, ctx) {},
+  },
+
+  env: {
+    CTF_SPACE_ID: config.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
+    CTF_PERSON_ID: config.CTF_PERSON_ID,
+    CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID
+  },
 }
