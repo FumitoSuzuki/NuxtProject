@@ -1,8 +1,9 @@
-const config = require("./.contentful.json");
+const config = require("./.environment.json");
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
+  // target: 'static',
+  target: config.NUXT_REND_TARGET,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
