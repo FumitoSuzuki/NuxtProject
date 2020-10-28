@@ -3,5 +3,6 @@
   "CTF_BLOG_POST_TYPE_ID": "article",
   "CTF_SPACE_ID": "d4srb7odbtho",
   "CTF_CDA_ACCESS_TOKEN": "QudKgIALO_IYnicELq-MXRkqNggRuxBA5i98fAE_giM",
+  "CTF_HOST": "cdn.contentful.com",
   "NUXT_REND_TARGET": "static"
 }
