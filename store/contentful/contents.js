@@ -25,7 +25,7 @@ export const actions = {
       await dispatch('initialize')
     } else {
       await commit('totalEntries', result)
-      // await commit("makeOrigin", result);
+      await commit('makeOrigin', result)
     }
   },
 }

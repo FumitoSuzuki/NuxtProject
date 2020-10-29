@@ -10,15 +10,15 @@
 
 <script>
 export default {
+  props: {
+    bgColor: { type: String, default: 'white' },
+  },
   data() {
     return {
       collapse: 'nav-collapse',
       active: false,
       showed: false,
     }
-  },
-  props: {
-    bgColor: { type: String, default: 'white' },
   },
   computed: {
     isActive() {
@@ -31,14 +31,6 @@ export default {
       return this.bgColor
     },
   },
-  methods: {
-    setActive(isJustShown) {
-      this.active = isJustShown
-    },
-    setShowed(isJustShown) {
-      this.showed = isJustShown
-    },
-  },
   mounted() {
     this.$root.$on('bv::collapse::state', (collapseId, isJustShown) => {
       if (collapseId === this.collapse) {
@@ -46,6 +38,14 @@ export default {
         this.setShowed(isJustShown)
       }
     })
+  },
+  methods: {
+    setActive(isJustShown) {
+      this.active = isJustShown
+    },
+    setShowed(isJustShown) {
+      this.showed = isJustShown
+    },
   },
 }
 </script>

@@ -19,17 +19,15 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'prettier/prettier': [
-      'error',
-    ],
+    'prettier/prettier': ['error'],
     // ↓末尾のセミコロンを許容する。
     // 'comma-dangle': ['error', 'only-multiline'],
     // ↓空白行に対してwarnのみ出るようにする。
-    'no-multiple-empty-lines': ['warn', {max: 1}],
+    'no-multiple-empty-lines': ['warn', { max: 1 }],
     //
-    'object-shorthand': ["error", "always", { "avoidQuotes": true }],
+    'object-shorthand': ['error', 'always', { avoidQuotes: true }],
     //
     // "camelcase": ["error", {"allow": ["required_if"]}]
-    "camelcase": ["error", {ignoreImports: true, properties: "never"}],    
+    camelcase: ['error', { ignoreImports: true, properties: 'never' }],
   },
 }

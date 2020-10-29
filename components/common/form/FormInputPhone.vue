@@ -17,12 +17,12 @@
       >
         <b-form-input
           id="phone"
-          type="text"
           v-model="commitNumber"
+          type="text"
           class="right-form"
         />
         <b-form-invalid-feedback :state="!errors.length">
-          <p v-for="(item, key) in errors" v-text="item" :key="key" />
+          <p v-for="(item, key) in errors" :key="key" v-text="item" />
         </b-form-invalid-feedback>
       </ValidationProvider>
     </b-input-group>

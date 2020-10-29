@@ -13,6 +13,12 @@
 
 <script>
 export default {
+  props: {
+    heightRatio: {
+      type: Number,
+      default: 100,
+    },
+  },
   data() {
     return {
       windowWidth: 0,
@@ -21,12 +27,6 @@ export default {
       scrollHeight: 0,
       heightParam: {},
     }
-  },
-  props: {
-    heightRatio: {
-      type: Number,
-      default: 100,
-    },
   },
   computed: {
     boxHeight() {

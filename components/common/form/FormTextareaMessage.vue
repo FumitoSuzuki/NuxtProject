@@ -2,17 +2,17 @@
   <b-form-group label="Message">
     <b-form-radio-group
       id="radio"
-      class="bg-light p-2 top-form"
       v-model="commitType"
+      class="bg-light p-2 top-form"
       :options="type.options"
     />
     <ValidationProvider rules="required" name="question">
       <b-form-textarea
         id="text"
+        v-model="commitText"
         placeholder="Please enter your questions."
         rows="6"
         debounce="500"
-        v-model="commitText"
         class="bottom-form"
       />
     </ValidationProvider>

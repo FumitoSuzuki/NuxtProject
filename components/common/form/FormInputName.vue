@@ -1,9 +1,9 @@
 <template>
   <b-form-group label="Name" label-for="name">
     <ValidationProvider v-slot="{ errors }" rules="required" name="Name">
-      <b-form-input id="name" type="text" v-model="commit" />
+      <b-form-input id="name" v-model="commit" type="text" />
       <b-form-invalid-feedback :state="!errors.length">
-        <p v-for="(item, key) in errors" v-text="item" :key="key" />
+        <p v-for="(item, key) in errors" :key="key" v-text="item" />
       </b-form-invalid-feedback>
     </ValidationProvider>
   </b-form-group>

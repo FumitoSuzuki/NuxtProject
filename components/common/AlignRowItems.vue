@@ -10,6 +10,14 @@ export default {
     className: Array,
     trigger: Array,
   },
+  watch: {
+    trigger: {
+      handler(val) {
+        this.resetHeight()
+      },
+      deep: true,
+    },
+  },
   mounted() {
     this.setStyleHeight()
     window.addEventListener('resize', this.resetHeight)
@@ -38,14 +46,6 @@ export default {
         }
       }
       this.setStyleHeight()
-    },
-  },
-  watch: {
-    trigger: {
-      handler(val) {
-        this.resetHeight()
-      },
-      deep: true,
     },
   },
 }
