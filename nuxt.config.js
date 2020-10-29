@@ -52,7 +52,16 @@ export default {
     '@nuxtjs/axios',
     // https://github.com/markdown-it/markdown-it
     '@nuxtjs/markdownit',
+    // https://www.npmjs.com/package/nuxt-basic-auth-module
+    'nuxt-basic-auth-module'
   ],
+
+  // basic configuration (https://www.npmjs.com/package/nuxt-basic-auth-module)
+  basic: {
+    name: process.env.BASIC_USER,
+    pass: process.env.BASIC_PASS,
+    enabled: new Boolean(process.env.BASIC_PASS),
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
