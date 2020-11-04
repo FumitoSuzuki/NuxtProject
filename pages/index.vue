@@ -3,6 +3,7 @@
     <FirstView />
     <Introduction />
     <Practicable />
+    <Sponsors />
     <Information />
     <TheNavbar />
   </article>

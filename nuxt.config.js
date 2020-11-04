@@ -31,6 +31,7 @@ export default {
   // Markdown parser done right (https://github.com/markdown-it/markdown-it)
   markdownit: {
     html: true,
+    breaks: true,
     injected: true,
     use: ['markdown-it-highlightjs'],
   },
@@ -53,7 +54,7 @@ export default {
     // https://github.com/markdown-it/markdown-it
     '@nuxtjs/markdownit',
     // https://www.npmjs.com/package/nuxt-basic-auth-module
-    'nuxt-basic-auth-module'
+    'nuxt-basic-auth-module',
   ],
 
   // basic configuration (https://www.npmjs.com/package/nuxt-basic-auth-module)

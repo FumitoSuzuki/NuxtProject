@@ -4,7 +4,7 @@
       <b-row style="min-height: 20%"></b-row>
       <b-row align-v="center" style="min-height: 60%">
         <b-col cols="12" class="text-center">
-          <h1 class="site-title">Hello NUXT JS.</h1>
+          <h1 class="site-title">{{ siteTitle }}</h1>
           <p></p>
         </b-col>
       </b-row>
@@ -16,6 +16,16 @@
     </b-container>
   </FullsizeBox>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      siteTitle: 'Hello NUXT JS.',
+    }
+  },
+}
+</script>
 
 <style scoped>
 .site-title {

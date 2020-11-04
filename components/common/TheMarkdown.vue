@@ -1,10 +1,15 @@
 <template>
-  <article class="text-light" v-html="markdown" />
+  <article v-html="markup" />
 </template>
 
 <script>
 export default {
-  props: ['markdown'],
+  props: ['md'],
+  computed: {
+    markup() {
+      return this.$md.render(this.md)
+    },
+  },
 }
 </script>
 
