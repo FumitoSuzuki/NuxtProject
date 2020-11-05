@@ -11,31 +11,29 @@
         <b-col cols="12" md="4">
           <h3>MODULAR</h3>
           <p class="text">
-            <Break>Nuxt is based on a powerful modular architecture.</Break>
-            <Break>
+            <ResponsiveBreak>
+              Nuxt is based on a powerful modular architecture.
+              <br />
               You can choose from more than 50 modules to make your development
               faster and easier.
-            </Break>
-            <Break>
+              <br />
               You don't have to reinvent the wheel to get PWA benefits, add
               Google Analytics to your page or generate a sitemap.
-            </Break>
+            </ResponsiveBreak>
           </p>
         </b-col>
         <b-col cols="12" md="4">
           <h3>PERFORMANT</h3>
           <p class="text">
-            <Break>
+            <ResponsiveBreak>
               With Nuxt.js, your application will be optimized out of the box.
-            </Break>
-            <Break>
+              <br />
               We do our best to build performant applications by utilizing
               Vue.js and Node.js best practices.
-            </Break>
-            <Break>
+              <br />
               To squeeze every unnecessary bit out of your app Nuxt includes a
               bundle analyzer and lots of opportunities to fine-tune your app.
-            </Break>
+            </ResponsiveBreak>
           </p>
         </b-col>
         <b-col cols="12" md="4">

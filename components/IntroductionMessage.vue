@@ -4,8 +4,11 @@
       <b-col>
         <h2>The Intuitive Vue Framework</h2>
         <p>
-          Build your next Vue.js application with confidence using NuxtJS. An
-          open source framework making web development simple and powerful.
+          <ResponsiveBreak>
+            Build your next Vue.js application with confidence using NuxtJS.
+            <br />
+            An open source framework making web development simple and powerful.
+          </ResponsiveBreak>
         </p>
       </b-col>
     </b-row>
