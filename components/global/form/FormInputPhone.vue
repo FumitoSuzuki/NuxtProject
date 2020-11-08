@@ -81,4 +81,7 @@ export default {
   border-top-left-radius: 0rem;
   border-bottom-left-radius: 0rem;
 }
+.input-group {
+  flex-wrap: nowrap;
+}
 </style>

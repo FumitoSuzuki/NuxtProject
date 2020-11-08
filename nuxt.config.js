@@ -23,6 +23,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/window' },
+    { src: '~/plugins/getImage' },
     { src: '~/plugins/aos', ssr: false },
     { src: '~/plugins/validate' },
     { src: '~/plugins/contentful.js' },
@@ -53,7 +54,9 @@ export default {
     // https://github.com/markdown-it/markdown-it
     '@nuxtjs/markdownit',
     // https://www.npmjs.com/package/nuxt-basic-auth-module
-    'nuxt-basic-auth-module'
+    'nuxt-basic-auth-module',
+    // https://content.nuxtjs.org
+    "@nuxt/content",
   ],
 
   // basic configuration (https://www.npmjs.com/package/nuxt-basic-auth-module)

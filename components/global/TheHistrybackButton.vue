@@ -1,5 +1,5 @@
 <template>
-  <b-button block :variant="variant" @click="histryBack">< Back</b-button>
+  <b-button block :variant="variant" @click="histryBack">&lt; Back</b-button>
 </template>
 
 <script>

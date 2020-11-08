@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <section id="form">
     <!-- This is Input Form. This Form is not submitted. -->
     <b-form ref="form" @submit.prevent="onConfirm" @reset="onReset">
       <ValidationObserver ref="observer" v-slot="{ invalid }">
@@ -63,7 +63,7 @@
       <input type="text" name="message-type" />
       <textarea name="message-text" />
     </form>
-  </b-container>
+  </section>
 </template>
 
 <script>
