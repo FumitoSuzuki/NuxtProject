@@ -1,15 +1,36 @@
 <template>
   <b-container class="my-5">
-    <PostsListRow />
-    <PostsPagenationRow />
+    <AlignRowItems :class-name="['title', 'text']" :trigger="onThisPage">
+      <b-row class="px-1">
+        <b-col
+          v-for="(item, key) in onThisPage"
+          :key="key"
+          cols="13"
+          md="6"
+          lg="3"
+          class="mb-4 px-2"
+        >
+          <PostsList :item="item" />
+        </b-col>
+      </b-row>
+    </AlignRowItems>
+    <b-row>
+      <b-col>
+        <PostsPagenation />
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   async asyncData({ store, params }) {
     const pageNum = params.num ? params.num : '1'
     await store.commit('contentful/pageNumber', pageNum)
+  },
+  computed: {
+    ...mapGetters('contentful', ['onThisPage']),
   },
 }
 </script>

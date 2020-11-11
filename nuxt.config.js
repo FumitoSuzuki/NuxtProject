@@ -33,7 +33,17 @@ export default {
   markdownit: {
     html: true,
     injected: true,
-    use: ['markdown-it-highlightjs'],
+    // use: ['markdown-it-highlightjs'],
+    use: ['markdown-it-prism'],
+  },
+
+  // You can configure @nuxt/content (https://content.nuxtjs.org/configuration)
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
   },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -68,6 +78,17 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
+
+  // scrollToTop not working for `_slug` style routes
+  // (https://github.com/nuxt/nuxt.js/issues/5162)
+  router: {
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition;
+      }
+      return { x: 0, y: 0 };
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

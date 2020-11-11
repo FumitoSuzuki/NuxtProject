@@ -1,5 +1,5 @@
 <template>
-  <section class="main">
+  <section id="main">
     <FullsizeBox class="p-2">
       <Introduction class="text-center">
         <template #header></template>
@@ -19,9 +19,9 @@
       <Topics :contents="topics" />
       <Others :contents="others" class="my-3" />
     </article>
-    <section class="bg-info py-5">
+    <aside class="bg-info py-5">
       <Information />
-    </section>
+    </aside>
   </section>
 </template>
 
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-.main {
+#main {
   background-color: white;
 }
 

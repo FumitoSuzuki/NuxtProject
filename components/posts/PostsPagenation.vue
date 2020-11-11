@@ -1,14 +1,10 @@
 <template>
-  <b-row>
-    <b-col>
-      <b-pagination-nav
-        v-model="pageNumber"
-        :link-gen="linkGen"
-        :number-of-pages="numberOfPage"
-        align="center"
-      />
-    </b-col>
-  </b-row>
+  <b-pagination-nav
+    v-model="pageNumber"
+    :link-gen="linkGen"
+    :number-of-pages="numberOfPage"
+    align="center"
+  />
 </template>
 
 <script>

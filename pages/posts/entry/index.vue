@@ -1,10 +1,14 @@
 <template>
-  <section>
+  <section id="main">
     <header>
-      <EntryHeader :entry="entry" />
+      <EntryHeader>
+        <template #title>
+          <h1 class="text-dark">{{ entry.title }}</h1>
+        </template>
+      </EntryHeader>
     </header>
-    <nuxt-child :entry="entry" />
-    <aside>
+    <nuxt-child :entry="entry(id)" />
+    <aside class="bg-info py-5">
       <Information />
     </aside>
   </section>
@@ -13,18 +17,19 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  asyncData({ store, params }) {
+  scrollToTop: true,
+  async asyncData({ store, params }) {
+    const id = await params.id
     return {
-      id: params.id,
+      id,
     }
   },
   computed: {
-    ...mapGetters('contentful', {
-      getEntry: 'entry',
-    }),
-    entry() {
-      return this.getEntry(this.id)
-    },
+    ...mapGetters('contentful', ['entry']),
+  },
+  beforeRouteUpdate(to, from, next) {
+    this.$nuxt.refresh()
+    next()
   },
 }
 </script>
