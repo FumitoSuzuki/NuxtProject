@@ -3,6 +3,9 @@ title: SERVER SIDE RENDERED RENDERED
 image:
   url: image/2148237985.jpg
   alt: abstract
+columnAttr:
+ cols: 12
+ md: 6
 ---
 
 Static Site Generation is a very hot topic right now (aka JAMStack).   

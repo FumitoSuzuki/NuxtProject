@@ -1,5 +1,5 @@
 ---
-title: PERFORMANT PERFORMANT
+title: PERFORMANT
 ---
 
 With Nuxt.js, your application will be optimized out of the box.  

@@ -3,7 +3,7 @@
     <header>
       <EntryHeader>
         <template #title>
-          <h1 class="text-dark">{{ entry.title }}</h1>
+          <h1 class="text-dark">{{ entry(id).title }}</h1>
         </template>
       </EntryHeader>
     </header>

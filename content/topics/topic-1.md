@@ -3,6 +3,9 @@ title: SERVER SIDE RENDERED
 image:
   url: image/2148237985.jpg
   alt: abstract
+columnAttr:
+ cols: 12
+ md: 6
 ---
 
 The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript.  

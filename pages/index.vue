@@ -16,7 +16,7 @@
         <nuxt-content :document="leadcopy" />
       </LeadCopy>
       <Characters :contents="characters" />
-      <Topics :contents="topics" />
+      <Topics :rows="topics" />
       <Others :contents="others" class="my-3" />
     </article>
     <aside class="bg-info py-5">
@@ -37,10 +37,7 @@ export default {
       intro,
       leadcopy,
       characters,
-      topics: {
-        div1: topics.splice(0, 2),
-        div2: topics,
-      },
+      topics: [topics.splice(0, 2), topics],
       others,
     }
   },
