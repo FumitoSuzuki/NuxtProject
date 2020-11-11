@@ -96,6 +96,7 @@ export default {
     extractCSS: true,
     transpile: ['vee-validate/dist/rules'],
     extend(config, ctx) {},
+    babel: { compact: true },
   },
 
   env: {
